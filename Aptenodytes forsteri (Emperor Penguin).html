@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd"><html><head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c2c60fdc71","applicationID":"2706765","transactionName":"IAteQktYXghcQhYAUxcFWVpKGFsKXVVB","queueTime":0,"applicationTime":522,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script><title>Aptenodytes forsteri (Emperor Penguin)</title><script type="text/javascript">addEventListener('error', window.__e=function f(e){f.q=f.q||[];f.q.push(e)});</script><script async="" src="https://www.google-analytics.com/analytics.js"></script><link href="/assets/application-f65a405f045fcebfda85208cbf70d429.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/blitzer/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" /><script src="/assets/application-1e01fb0ed608da816b06d533596beaa7.js" type="text/javascript"></script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script><script type="text/javascript">jQuery.noConflict()</script><script src="/mousetrap.min.js"></script><script src="/jquery.cookie.js"></script><script src="/jquery.colorize-1.7.0.js"></script><script src="/modernizr.js"></script><script src="/jquery.easytabs.min.js"></script><script src="/jquery.hashchange.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"></script><script src="/jqueryapp.js"></script><title>Aptenodytes forsteri (Emperor Penguin)</title><link href="http://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" type="text/css" /><link href="http://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet" type="text/css" /><link href="//cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css" rel="stylesheet" type="text/css" /><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="//cdnjs.cloudflare.com/ajax/libs/jquery-jgrowl/1.4.1/jquery.jgrowl.min.css" media="screen" rel="stylesheet" type="text/css" /><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-jgrowl/1.4.1/jquery.jgrowl.min.js" type="text/javascript"></script></head><body><div class="headfoot" id="header"><div class="box"><div class="logo"><a href="/"><img alt="Home Page" border="0" src="/images/common/redlist50.png" /></a></div><div class="bannercontainer"><table border="0" cellmargin="0" cellpadding="0" width="100%"><tbody><tr><td align="left"><img alt="The IUCN Red List of Threatened Species(tm)" src="/images/common/iucnredlistbanner.gif" title="The IUCN Red List of Threatened Species(tm)" /></td><td align="right" valign="middle"><span id="dataVersion">2016-3</span></td><td align="right"><div id="help"><div class="rc-head"><div class="rc-head_top"><div>&nbsp;</div></div><div class="rc-head_content"><a href="/search/list">Login</a> | <a href="/info/faq">FAQ</a> | <a href="/about/contact-info">Contact</a> | <a href="/info/terms-of-use">Terms of use</a> | <a href="http://www.iucn.org">IUCN.org</a><div id="feedback"><span id="feedback_button"><img src="/images/feedback.png" /></span></div><!--Feedback form (hidden initially)--><form action="/feedback" class="form-horizontal" id="feedbackForm" method="post" name="feedbackForm" style="display: none;text-align: left;"><div class="form-group" style="padding-left: 15px;padding-right: 15px;padding-bottom:15px;font-size: 13px;">Thank you for taking the time to provide feedback on the IUCN Red List of Threatened Species website, we are grateful for your input. </div><div class="form-group" style="padding-left: 15px;padding-right: 15px;padding-bottom:15px;font-size: 13px;"><label class="col-xs-3 control-label">Email address *</label><div class="col-xs-7"><input class="form-control" name="email" type="text" /></div></div><div class="form-group" style="padding-left: 15px;padding-right: 15px;padding-bottom:15px;font-size: 13px;"><label class="col-xs-3 control-label">Name *</label><div class="col-xs-7"><input class="form-control" name="name" type="text" /></div></div><div class="form-group" style="padding-left: 15px;padding-right: 15px;padding-bottom:15px;font-size: 13px;"><label class="col-xs-3 control-label">Message *</label><div class="col-xs-9"><textarea class="form-control" name="message" rows="5" style="width: 90%;"></textarea></div></div><div class="form-group" style="padding-left: 15px;padding-right: 15px;padding-bottom:15px;font-size: 13px;"><script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<div class="g-recaptcha" data-sitekey="6LcFeiYTAAAAAPMBDw0jyZELqfuSrV_-nq0VZZyc"></div>
+          <noscript>
+            <div style="width: 302px; height: 352px;">
+              <div style="width: 302px; height: 352px; position: relative;">
+                <div style="width: 302px; height: 352px; position: absolute;">
+                  <iframe
+                    src="https://www.google.com/recaptcha/api/fallback?k=6LcFeiYTAAAAAPMBDw0jyZELqfuSrV_-nq0VZZyc"
+                    frameborder="0" scrolling="no"
+                    style="width: 302px; height:352px; border-style: none;">
+                  </iframe>
+                </div>
+                <div style="width: 250px; height: 80px; position: absolute; border-style: none;
+                  bottom: 21px; left: 25px; margin: 0px; padding: 0px; right: 25px;">
+                  <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                    class="g-recaptcha-response"
+                    style="width: 250px; height: 80px; border: 1px solid #c1c1c1;
+                    margin: 0px; padding: 0px; resize: none;" value="">
+                  </textarea>
+                </div>
+              </div>
+            </div>
+          </noscript>
+</div><div class="form-group" style="padding-left: 15px;padding-right: 15px;font-size: 13px;text-align:right"><div class="col-xs-5 col-xs-offset-3"><button id="feedback-form-submit" type="submit"><i class="fa fa-envelope-o"></i> Send</button></div></div></form></div><div class="rc-head_bottom"><div>&nbsp;</div></div></div></div></td></tr></tbody></table></div><div class="navcontainer"><div id="topnav_container"><ul id="topnav_menu"><li class="top"><a href="/about" class="top_link" id="about"><span>About</span></a><ul class="sub"><li><a href="/about/introduction">Introduction</a></li><li><a href="/about/overview">Overview of The IUCN Red List</a></li><li><a href="/about/supportredlist">Support The IUCN Redlist</a></li><li><a href="/about/publication">Publications</a></li><li><a href="/about/summary-statistics">Summary Statistics</a></li><li><a href="/about/links">External Links</a></li><li><a href="/about/citing">Citing The IUCN Red List</a></li><li><a href="/about/contact-info">Contact Details</a></li></ul></li><li class="top"><a href="/initiatives" class="top_link" id="initiatives"><span>Initiatives</span></a><ul class="sub"><li><a href="/initiatives/amphibians">Amphibians</a></li><li><a href="/initiatives/mammals">Mammals</a></li><li><a href="/initiatives/europe">Europe</a></li><li><a href="/initiatives/mediterranean">Mediterranean</a></li><li><a href="/initiatives/freshwater">Freshwater</a></li><li><a href="/initiatives/marine">Marine</a></li></ul></li><li class="top"><a href="/news" class="top_link" id="news"><span>News</span></a><ul class="sub"><li><a href="/current-news">Current</a></li><li><a href="/archives">Archives</a></li></ul></li><li class="top"><a href="/photos" class="top_link" id="photos"><span>Photos</span></a><ul class="sub"><li><a href="/photos/2016">2016</a></li><li><a href="/photos/2015">2015</a></li><li><a href="/photos/2014">2014</a></li><li><a href="/photos/2013">2013</a></li><li><a href="/photos/2012">2012</a></li><li><a href="/photos/2011">2011</a></li><li><a href="/photos/2010">2010</a></li><li><a href="/photos/2009">2009</a></li><li><a href="/photos/2008">2008</a></li><li><a href="/photos/2007">2007</a></li><li><a href="/photos/2006">2006</a></li><li><a href="/photos/2004">2004</a></li><li><a href="/photos/2003">2003</a></li><li><a href="/photos/2002">2002</a></li><li><a href="/photos/2000">2000</a></li></ul></li><li class="top"><a href="/partners" class="top_link" id="partners"><span>Partners</span></a><ul class="sub"><li><a href="/partners/partners">IUCN Red List Partnership</a></li><li><a href="/partners/technical">Technical Support</a></li></ul></li><li class="top"><a href="/sponsors" class="top_link" id="sponsors"><span>Sponsors</span></a></li><li class="top"><a href="/technical-documents" class="top_link" id="technical-documents"><span>Resources</span></a><ul class="sub"><li><a href="/technical-documents/red-list-documents">Key Documents</a></li><li><a href="/technical-documents/categories-and-criteria">Categories and Criteria</a></li><li><a href="/technical-documents/publications">Publications</a></li><li><a href="/technical-documents/classification-schemes">Classification Schemes</a></li><li><a href="/technical-documents/data-organization">Data Organization</a></li><li><a href="/technical-documents/red-list-api">Red List API</a></li><li><a href="/technical-documents/spatial-data">Spatial Data Download</a></li><li><a href="/technical-documents/information-sources-and-quality">Information Sources and Quality</a></li><li><a href="/technical-documents/assessment-process">Assessment Process</a></li><li><a href="/technical-documents/red-list-training">Red List Training</a></li><li><a href="/technical-documents/references">References</a></li><li><a href="/technical-documents/acknowledgements">Acknowledgements</a></li><li><a href="/technical-documents/sisupdate">SIS News and Updates</a></li></ul></li><li class="top"><a href="http://support.iucnredlist.org" class="top_link" id="ttp://support.iucnredlist.org" target="_blank"><span>Take Action</span></a></li></ul></div><div class="helpsave"><a href="https://support.iucnredlist.org/donate" target="_blank"><img alt="" border="0" src="http://wiki_docs.s3.amazonaws.com/images/donate_now_red_list_green.png" /></a></div><div id="search"><div class="rc-head"><div class="rc-head_top"><div>&nbsp;</div></div><div class="rc-head_content"><form action="/search/external" method="POST" onSubmit="return checkQuickSearch()"><input class="text" data-qtip="Enter a search term (taxonomic name to species level or common name)" id="quickSearchText" name="text" onBlur="resetOnBlur(this)" onFocus="clearOnFocus(this)" type="text" value="Enter Red List search term(s)" /><input id="rlsearchboxmodeflag" name="mode" type="hidden" value="" />&nbsp;<input alt="Enter a search term (taxonomic name to species level or common name) in the box and click here to see the results." height="23" src="/images/common/icons/search.gif" title="Enter a search term (taxonomic name to species level or common name) in the box and click here to see the results." type="image" width="22" />&nbsp;<img alt="Click here to view more detailed search options such as  taxonomy, location, habitat, assessment." data-qtip="Click here to view more detailed search options such as taxonomy, location, habitat, assessment." id="searchOpen" onclick="showAdvanced(window.searchmode); return true;" src="/images/common/icons/search_open.gif" style="margin:0; padding:0;" />&nbsp; &nbsp;<span style="font-size: smaller;"><a href="http://discover.iucnredlist.org" id="discoverlink" target="_blank">Discover more</a></span><div class="error" id="quickSearchError">&nbsp;</div></form></div></div></div></div></div></div><div id="breadcrumb"><a href="/">Home</a> &raquo; Aptenodytes forsteri (Emperor Penguin)</div><div id="container"><div id="inner"><div class="details"><div id="container"><div id="inner"><div id="leftcol"><div><div data-species-id="22697752" id="ajax-lightbox"></div></div><a href="http://maps.iucnredlist.org/map.html?id=22697752"><img alt="Map_thumbnail_large_font" border="0" src="/images/map_thumbnail_large_FONT.jpg" /></a><br /><br /><div id="div-gpt-ad-1419251533750-0" style="height:176; width:245;"></div><script type="text/javascript">googletag.cmd.push(function() {
+  googletag.display("div-gpt-ad-1419251533750-0");
+});</script></div><div id="content_factsheet"><div id="top"><table border="0" cellpadding="0" width="770"><tr><td width="65%"><h1 style="font-size: 1.4em"><span class="notranslate"><span class="sciname">Aptenodytes forsteri</span></span>&nbsp;</h1><span class="doi_link top" data-assessment-id="93637033"><a></a></span></td><td width="2%"></td><td class="regional" width="30%">Scope: <span>Global</span><br /><div style="padding-top:2px"><span>Language: English</span></div><div class="download-link"><span class="pdf_link" data-assessment-id="93637033"><a style="text-decoration: none;"><span style="text-decoration: underline;">Download assessment</span> <i class="fa fa-file-pdf-o"></i></a></span></div><div class="download-link"></div></td></tr></table></div><div id="scale_factsheet"><img alt="Status_ne_off" class="off" src="/assets/details/status_ne_off-8575e0210a637cf0bae858fc9c46071f.gif" /><img alt="Status_dd_off" class="off" src="/assets/details/status_dd_off-9b16e00307749bac5c5ff15fe94ea2a0.gif" /><img alt="Status_lc_off" class="off" src="/assets/details/status_lc_off-f2c32dd576f5b067d64467badf7bd69c.gif" /><img alt="Status_nt_on" class="on" src="/assets/details/status_nt_on-f58ffb7b85d66402ed5edf52e2b03595.gif" /><img alt="Status_vu_off" class="off" src="/assets/details/status_vu_off-fa0f4d871ba412a735d3d5423cae02d2.gif" /><img alt="Status_en_off" class="off" src="/assets/details/status_en_off-b85a8047fa1dcf2c6265e5ed8bc7b2a6.gif" /><img alt="Status_cr_off" class="off" src="/assets/details/status_cr_off-6f21b005ec167ae9737812b9dc906b03.gif" /><img alt="Status_ew_off" class="off" src="/assets/details/status_ew_off-a876aa504cadde967d16d6691d0d913e.gif" /><img alt="Status_ex_off" class="off" src="/assets/details/status_ex_off-140059c1efdc2088a3d8437d7b4751e6.gif" /></div><div id="detailsPage"><div id="topnav_factsheet">
+  <ul id="tabs">
+
+      <li class=&quot;active&quot;>
+
+      <a href="/details/summary/22697752/0" class="current">Summary</a></li>
+
+
+      <li >
+
+      <a href="/details/classify/22697752/0">Classification Schemes</a></li>
+
+
+      <li >
+
+      <a href="/details/links/22697752/0">Images &amp; External Links</a></li>
+
+
+      <li >
+
+      <a href="/details/biblio/22697752/0">Bibliography</a></li>
+
+
+      <li >
+
+      <a href="/details/full/22697752/0">Full Account</a></li>
+
+  </ul>
+</div>
+
+
+<!-- Right -->
+<div id="rightnav_factsheet">
+
+    <div>
+      <a href="#sectionTaxonomy" onClick="new Effect.ScrollTo('sectionTaxonomy'); return false;" class="dynamic">Taxonomy</a>
+    </div>
+    <div>
+      <a href="#sectionAssessment" onClick="new Effect.ScrollTo('sectionAssessment'); return false;" class="dynamic">Assessment Information</a>
+    </div>
+    <div>
+      <a href="#sectionRange" onClick="new Effect.ScrollTo('sectionRange'); return false;" class="dynamic">Geographic Range</a>
+    </div>
+    <div>
+      <a href="#sectionPopulation" onClick="new Effect.ScrollTo('sectionPopulation'); return false;" class="dynamic">Population</a>
+    </div>
+    <div>
+      <a href="#sectionHabitat" onClick="new Effect.ScrollTo('sectionHabitat'); return false;" class="dynamic">Habitat and Ecology</a>
+    </div>
+    <div>
+      <a href="#sectionThreats" onClick="new Effect.ScrollTo('sectionThreats'); return false;" class="dynamic">Threats</a>
+    </div>
+    <div>
+      <a href="#sectionMeasures" onClick="new Effect.ScrollTo('sectionMeasures'); return false;" class="dynamic">Conservation Actions</a>
+    </div>
+  <p>
+  <!-- <img src="/images/printer.png"/>
+  <a href="/details/22697752/0/print">View Printer Friendly</a> -->
+  </p>
+
+  <!-- GOOGLE TRANSLATE WIDGET  -->
+ <div style="border-top: solid 1px #d81e05;margin-top: 10px;margin-bottom: 10px;"></div>
+  <div style="">
+    <p style="padding-bottom:10px">
+      <i class="fa fa-lg fa-info-circle" style="color:#d81e05;" data-qtip="&lt;strong&gt;Terms of Use:&lt;/strong&gt; The Google Translate service is a means by which the IUCN Red List of Threatened Species (IUCN Red List) offers translations of content and is meant solely for the convenience of non-English speaking users of the website. The translated content is provided directly and dynamically by Google; The IUCN Red List has no direct control over the translated content as it appears using this tool. Therefore, in all contexts, the English content, as directly provided by the IUCN Red List is to be held authoritative."></i>
+      <span style="font-weight:normal"> Translate page into:</span></p>
+    <div id="google_translate_element" style="padding-bottom:10px"></div>
+    <script type="text/javascript">function googleTranslateElementInit() {
+      new google.translate.TranslateElement({layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+  </div>
+
+</div>
+
+<!-- Factsheet data -->
+<div id="data_factsheet">
+  <div id="detailsTabSpinner"> </div>
+
+
+      <h2 id="sectionTaxonomy" class=&quot;first&quot;>
+        Taxonomy
+        <a class="up dynamic" href="#top" onClick="new Effect.ScrollTo('top'); return false;">[top]</a>
+      </h2>
+      <table class="tab_data" cellpadding="0" cellspacing="0">
+        <tr>
+  <th>Kingdom</th>
+  <th>Phylum</th>
+  <th>Class</th>
+  <th>Order</th>
+  <th>Family</th>
+</tr>
+<tr>
+  <td>Animalia</td>
+  <td>Chordata</td>
+  <td>Aves</td>
+  <td>Sphenisciformes</td>
+  <td>Spheniscidae</td>
+</tr>
+</table>
+<br />
+<table class="tab_data" cellpadding="0" cellspacing="0">
+<tr>
+  <td class="label"><strong>Scientific Name:</strong></td>
+  <td class="sciName"><span class="notranslate"><span class="sciname">Aptenodytes forsteri</span></span></td>
+</tr>
+
+  <tr>
+    <td class="label"><strong>Species Authority:</strong></td>
+    <td>Gray, 1844</td>
+  </tr>
+
+
+
+
+<tr>
+  <td colspan="2">
+    <strong>Common Name(s):</strong>
+    <table cellpadding="0" cellspacing="0" style="padding-left: 15px">
+       <tr>
+         <td>English</td>
+         <td>&ndash;</td>
+         <td>Emperor Penguin</td>
+       </tr>
+       <tr>
+         <td>Spanish</td>
+         <td>&ndash;</td>
+         <td>Pingüino emperador </td>
+       </tr>
+    </table>
+  </td>
+</tr>
+
+
+<tr>
+  <td class="label"><strong>Taxonomic Source(s):</strong></td>
+  <td>del Hoyo, J., Collar, N.J., Christie, D.A., Elliott, A. and Fishpool, L.D.C. 2014. <i>HBW and BirdLife International Illustrated Checklist of the Birds of the World</i>. Lynx Edicions BirdLife International, Barcelona, Spain and Cambridge, UK.</td>
+</tr>
+
+
+
+
+      </table>
+
+
+      <h2 id="sectionAssessment" >
+        Assessment Information
+        <a class="up dynamic" href="#top" onClick="new Effect.ScrollTo('top'); return false;">[top]</a>
+      </h2>
+      <table class="tab_data" cellpadding="0" cellspacing="0">
+        <tr>
+  <td class="label"><strong>Red List Category &amp; Criteria:</strong></td>
+  <td>
+    Near Threatened
+
+
+    
+
+    <a href="/static/categories_criteria_3_1">ver 3.1</a>
+  </td>
+</tr>
+<tr>
+  <td class="label"><strong>Year Published:</strong></td>
+  <td>2016</td>
+</tr>
+<tr>
+  <td class="label"><strong>Date Assessed:</strong></td>
+  <td>2016-10-01</td>
+</tr>
+
+
+<tr>
+  <td class="label"><strong>Assessor(s):</strong></td>
+  <td>BirdLife International</td>
+</tr>
+
+<tr>
+  <td class="label"><strong>Reviewer(s):</strong></td>
+  <td>Butchart, S. &amp; Symes, A.</td>
+</tr>
+
+<tr>
+  <td class="label"><strong>Contributor(s):</strong></td>
+  <td>Ainley, D., Ballard, G., DuBois, L., Fretwell, P., Kooyman, G., Makhado, A., Schmidt, A., Schneider, T., Trathan, P., Wienecke, B. &amp; Woehler, E.</td>
+</tr>
+
+<tr>
+  <td class="label"><strong>Facilitator/Compiler(s):</strong></td>
+  <td>Butchart, S., Calvert, R., Ekstrom, J., Moreno, R., Taylor, J., Trathan, P., Wienecke, B.</td>
+</tr>
+
+<tr>
+  <td colspan="2">
+    <strong>Justification:</strong><br />
+    This species has been uplisted to Near Threatened because it is projected to undergo a moderately rapid population decline over the next three generations owing to the effects of projected climate change. However, it should be noted that there is considerable uncertainty over future climatic changes and how these will impact the species.
+
+    
+  </td>
+</tr>
+
+
+<tr><td><strong>Previously published Red List assessments:</strong></td><td><ul style="list-style-type: none;padding: 2px 1px;margin: 0px;"><li style="padding-bottom: 5px;"><span class="history-tooltip 40172193">2012 – Near Threatened (NT)</span><span class="history-content 40172193" style="display:none"><div style="padding-bottom:3px"><span class="pdf_link history-link" data-assessment-id="40172193"><a style="text-decoration: none;"><span style="text-decoration: underline;">Download assessment</span> <i class="fa fa-file-pdf-o"></i></a></span></div><div style="padding-bottom:3px"><span class="history-link"></span></div><div><span class="doi_link history-link" data-assessment-id="40172193"><a></a></span></div></span></li><li style="padding-bottom: 5px;"><span class="history-tooltip 23844508">2009 – Least Concern (LC)</span><span class="history-content 23844508" style="display:none"><div style="padding-bottom:3px"><span class="pdf_link history-link" data-assessment-id="23844508"><a style="text-decoration: none;"><span style="text-decoration: underline;">Download assessment</span> <i class="fa fa-file-pdf-o"></i></a></span></div><div style="padding-bottom:3px"><span class="history-link"></span></div><div><span class="doi_link history-link" data-assessment-id="23844508"><a></a></span></div></span></li><li style="padding-bottom: 5px;"><span class="history-tooltip 23845052">2008 – Least Concern (LC)</span><span class="history-content 23845052" style="display:none"><div style="padding-bottom:3px"><span class="pdf_link history-link" data-assessment-id="23845052"><a style="text-decoration: none;"><span style="text-decoration: underline;">Download assessment</span> <i class="fa fa-file-pdf-o"></i></a></span></div><div style="padding-bottom:3px"><span class="history-link"></span></div><div><span class="doi_link history-link" data-assessment-id="23845052"><a></a></span></div></span></li><li style="padding-bottom: 5px;"><span class="history-tooltip 23845878">2004 – Least Concern (LC)</span><span class="history-content 23845878" style="display:none"><div style="padding-bottom:3px"><span class="pdf_link history-link" data-assessment-id="23845878"><a style="text-decoration: none;"><span style="text-decoration: underline;">Download assessment</span> <i class="fa fa-file-pdf-o"></i></a></span></div><div style="padding-bottom:3px"><span class="history-link"></span></div><div><span class="doi_link history-link" data-assessment-id="23845878"><a></a></span></div></span></li><li style="padding-bottom: 5px;"><span class="history-tooltip 23846599">2000 – Lower Risk/least concern (LR/lc)</span><span class="history-content 23846599" style="display:none"><div style="padding-bottom:3px"><span class="pdf_link history-link" data-assessment-id="23846599"><a style="text-decoration: none;"><span style="text-decoration: underline;">Download assessment</span> <i class="fa fa-file-pdf-o"></i></a></span></div><div style="padding-bottom:3px"><span class="history-link"></span></div><div><span class="doi_link history-link" data-assessment-id="23846599"><a></a></span></div></span></li><li style="padding-bottom: 5px;"><span class="history-tooltip 23847303">1994 – Lower Risk/least concern (LR/lc)</span><span class="history-content 23847303" style="display:none"><div style="padding-bottom:3px"><span class="pdf_link history-link" data-assessment-id="23847303"><a style="text-decoration: none;"><span style="text-decoration: underline;">Download assessment</span> <i class="fa fa-file-pdf-o"></i></a></span></div><div style="padding-bottom:3px"><span class="history-link"></span></div><div><span class="doi_link history-link" data-assessment-id="23847303"><a></a></span></div></span></li><li style="padding-bottom: 5px;"><span class="history-tooltip 23847911">1988 – Lower Risk/least concern (LR/lc)</span><span class="history-content 23847911" style="display:none"><div style="padding-bottom:3px"><span class="pdf_link history-link" data-assessment-id="23847911"><a style="text-decoration: none;"><span style="text-decoration: underline;">Download assessment</span> <i class="fa fa-file-pdf-o"></i></a></span></div><div style="padding-bottom:3px"><span class="history-link"></span></div><div><span class="doi_link history-link" data-assessment-id="23847911"><a></a></span></div></span></li></ul></td></tr>
+
+      </table>
+
+
+      <h2 id="sectionRange" >
+        Geographic Range
+        <a class="up dynamic" href="#top" onClick="new Effect.ScrollTo('top'); return false;">[top]</a>
+      </h2>
+      <table class="tab_data" cellpadding="0" cellspacing="0">
+        <tr><td class="label"><strong>Range Description:</strong></td><td><p><em>Aptenodytes forsteri</em> has a circumpolar range, restricted when breeding to the coast of <strong>Antarctica</strong> where breeding colonies occur right around the continent (Fretwell <em>et al.</em> 2012). At least ¾ of the breeding colonies of this species are vulnerable to predicted changes in sea ice conditions and 1/5 may be quasi-extinct by 2100 (Jenouvrier et al. 2014). There are regional variations in population declines but colonies located north of 70°S have a probability of 46% to decrease by up to &gt;90% by the end of this century (Jenouvrier <em>et al.</em> 2014).&#160;&#160;</p><p></p></td></tr><tr><td class="label"><strong>Countries occurrence:</strong></td><td class="rangeList"><div class='group'><div class='title'>Native:</div>Antarctica</div><div class='group'><div class='title'>Vagrant:</div>Argentina; Chile; Falkland Islands (Malvinas); French Southern Territories; Heard Island and McDonald Islands; New Zealand; South Georgia and the South Sandwich Islands</div></td></tr><tr><th>Additional data:</th><td><table class="tab-data"><tr><td>&#9830; <em>Continuing decline in area of occupancy (AOO):</em></td><td style="padding-right:4em;">Yes</td></tr><tr><td>&#9830; <em>Extreme fluctuations in area of occupancy (AOO):</em></td><td>No</td><td>&#9830; <em>Estimated extent of occurrence (EOO) - km2:</em></td><td style="padding-right:4em;">11600000</td></tr><tr><td>&#9830; <em>Continuing decline in extent of occurrence (EOO):</em></td><td>Yes</td><td>&#9830; <em>Extreme fluctuations in extent of occurrence (EOO):</em></td><td style="padding-right:4em;">No</td></tr><tr><td>&#9830; <em>Continuing decline in number of locations:</em></td><td style="padding-right:4em;">Yes</td></tr><tr><td>&#9830; <em>Extreme fluctuations in the number of locations:</em></td><td>No</td></tr><tr><td>&#9830; <em>Upper elevation limit (metres):</em></td><td>500</td></tr><tr></tr></table></td></tr><tr><td class="label"><strong>Range Map:</strong></td><td><a href="http://maps.iucnredlist.org/map.html?id=22697752">Click here to open the map viewer and explore range.</a></td></tr>
+      </table>
+
+
+      <h2 id="sectionPopulation" >
+        Population
+        <a class="up dynamic" href="#top" onClick="new Effect.ScrollTo('top'); return false;">[top]</a>
+      </h2>
+      <table class="tab_data" cellpadding="0" cellspacing="0">
+        <tr><td class="label"><strong>Population:</strong></td><td><p>A survey of satellite images from 2009 found 46 colonies containing c.238,000 breeding pairs, suggesting a total of c.595,000 individuals (Fretwell <em>et al. </em>2012). Since then, a further seven colonies have been discovered bringing the total number to 53 (Fretwell, <em>pers. com.</em>). The global population estimate has not yet been updated.</p><br /><br /><strong>Trend Justification: &nbsp;</strong>An analysis carried out by Ainley <em>et al.</em> (2010) suggests that all colonies north of 67-68°S could be lost when Earth's tropospheric temperature reaches 2°C above pre-industrial levels, with negative impacts on all colonies north of 70°S. In this study, 2042 is the median year (range 2025-2052) at which a 2°C warming is &#160;forecast to be exceeded by the four climate models used (those models used in the IPCC Fourth Assessment Report [AR4] that most closely predicted data collected on environmental conditions in the Southern Ocean over recent decades) (Ainley &#160;<em>et al.</em> 2010). &#160;An ensemble of these models was then used to predict changes in climate and &#160;habitat in the Southern Ocean until 2025-2052, namely sea ice extent, &#160;persistence, concentration and thickness, wind speeds, precipitation and &#160;air temperature. Predictions were then made based on historic responses of the species to past variations in environmental conditions (Ainley <em>et al.</em> 2010). According to a survey of satellite images by Fretwell &#160;<em>et al.</em> (2012), the global population in 2009 is estimated at c.238,000 breeding pairs, including nine colonies north of 67°S, accounting for c.36,600 pairs. Assuming the loss of these colonies and an exponential population trend, BirdLife International has projected that a decline of c.27% in the number of breeding pairs will occur over the next 61 years (three generations). There are substantial uncertainties over future changes in the patterns of weather variables and how these are likely to impact the species, as well as whether there will be a lag in the decline of mature individuals as recruitment falls, or whether this decline will be proportional to the loss of colonies as climatic changes result in the increased mortality of mature individuals. The relocation of <em>A. forsteri</em> colonies will be limited by decreases in sea ice thickness, making it more difficult for them to &#160;find stable, long-lasting fast ice for breeding (Ainley &#160;<em>et al. </em>2010). Colonies could &#160;conceivably move to any areas of coastline not affected by ridges formed &#160;by wind-blown pack ice; however, where this has occurred in the past it &#160;has been regarded as a rare event. Importantly, it has been argued that a simple latitudinal gradient in the loss of &#160;sea ice is unlikely, and that warming has so far been regional in the Antarctic (Zwally <em>&#160;et al. </em>2002, Turner <em>et al.</em> 2009, Trathan <em>et al.</em> 2011, Fretwell <em>et al</em>. 2012). With these uncertainties in mind, a precautionary approach is taken, and the population is projected to decline by 20-29% over the next three generations.</td></tr><tr><td class="label"><strong>Current Population Trend:</strong></td><td id="popTrend"><img alt="" src="/assets/trends/unknown-bf83c776c4f648b16f9ce7326b28574a.png" /><span>Unknown</span></td></tr><tr><th>Additional data:</th><td><table class="tab-data"><tr><td>&#9830; <em>Number of mature individuals:</em></td><td style="padding-right:4em;">595000</td><td>&#9830; <em>Continuing decline of mature individuals:</em></td><td>Yes</td></tr><tr><td>&#9830; <em>Extreme fluctuations:</em></td><td>No</td><td>&#9830; <em>Population severely fragmented:</em></td><td style="padding-right:4em;">No</td></tr><tr><td>&#9830; <em>Continuing decline in subpopulations:</em></td><td style="padding-right:4em;">Unknown</td></tr><tr><td>&#9830; <em>Extreme fluctuations in subpopulations:</em></td><td>No</td><td>&#9830; <em>All individuals in one subpopulation:</em></td><td style="padding-right:4em;">No</td></tr><tr></tr></table></td></tr>
+      </table>
+
+
+      <h2 id="sectionHabitat" >
+        Habitat and Ecology
+        <a class="up dynamic" href="#top" onClick="new Effect.ScrollTo('top'); return false;">[top]</a>
+      </h2>
+      <table class="tab_data" cellpadding="0" cellspacing="0">
+        <tr><td class="label"><strong>Habitat and Ecology:</strong></td><td>This species is marine and pelagic, feeding mainly on fish in Antarctic waters (although krill and cephalopods can be important dietary components). It breeds almost exclusively on fast ice near the coast or on the coast itself, sometimes up to as much as 200 km from the open sea. Only one known colony occurs wholly on land (Robertson <em>et al.</em> 2014) while a small number uses available land for parts of their breeding cycle. Four colonies are known to locate at least temporarily onto the top of ice shelves (Fretwell <em>et al. </em>2014). It has an annual breeding cycle, arriving at colonies in late March to April, and lays eggs in May/ June. Chicks fledge in December/January (del Hoyo <em>et al.</em> 1992).</td></tr><tr><td class="label"><strong>Systems:</strong></td><td>Terrestrial; Marine</td></tr><tr><th class="label">Continuing decline in area, extent and/or quality of habitat:</th><td>Yes</td></tr><tr><th class="label">Generation Length (years):</th><td>20.4</td></tr><tr><th class="label">Movement patterns:</th><td>Full Migrant</td></tr><tr><th class="label">Congregatory:</th><td>Congregatory (and dispersive)</td></tr>
+      </table>
+
+
+
+      <h2 id="sectionThreats" >
+        Threats
+        <a class="up dynamic" href="#top" onClick="new Effect.ScrollTo('top'); return false;">[top]</a>
+      </h2>
+      <table class="tab_data" cellpadding="0" cellspacing="0">
+        <tr>
+  <td class="label"><strong>Major Threat(s):</strong></td>
+  <td>
+    <p><br/></p>
+
+    
+  </td>
+</tr>
+
+
+      </table>
+
+
+      <h2 id="sectionMeasures" >
+        Conservation Actions
+        <a class="up dynamic" href="#top" onClick="new Effect.ScrollTo('top'); return false;">[top]</a>
+      </h2>
+      <table class="tab_data" cellpadding="0" cellspacing="0">
+        <tr>
+  <td class="label"><strong>Conservation Actions:</strong></td>
+  <td>
+    <strong>Conservation Actions Underway</strong><br/>The species is the subject of on-going international research but there are currently no special conservation activities. Human disturbance is strictly regulated in some areas (Antarctic Specially Protected Areas).<br/><br/><strong>Conservation Actions Proposed</strong><br/>Conduct regular surveys to monitor population trends. Continue to improve on existing modelling work to better predict future population changes. Carry out further research into the species' ecology to improve understanding of how environmental changes will affect the population. Continue to monitor the thickness, extent and persistence of Antarctic sea ice, and other environmental variables to assess the availability of suitable breeding habitat. Continue international work to tackle the drivers of projected climate change.
+
+    
+  </td>
+</tr>
+
+
+      </table>
+
+
+
+</div>
+</div><table id="detailsFooter"><tbody>
+  <tr><hr style="color: #FFF4F4;background-color: #FFF4F4;height: 1px;" noshade></tr>
+    <tr>
+      <td><strong>Citation:</strong></td>
+      <td>BirdLife International. 2016.  <i>Aptenodytes forsteri</i>.   The IUCN Red List of Threatened Species 2016: e.T22697752A93637033. <span class="doi_link" data-assessment-id="93637033"><a></a>. </span>Downloaded on <b>20 February 2017</b>.</td>
+      <!-- <td>BirdLife International. 2016.  <i>Aptenodytes forsteri</i>. The IUCN Red List of Threatened Species.  Version 2016-3.  &lt;<a href="http://www.iucnredlist.org">www.iucnredlist.org</a>&gt;.  Downloaded on <b>20 February 2017</b>.</td> -->
+    </tr>
+  <tr>
+    <td><strong>Disclaimer:</strong></td>
+    <td>To make use of this information, please check the &lt;<a href="/info/terms-of-use">Terms of Use</a>&gt;.</td>
+  </tr>
+  <tr>
+    <td><strong>Feedback:</strong></td>
+    <td>If you see any errors or have any questions or suggestions on what is shown on this page, please provide us with <a href="#" id="feedbackLink">
+feedback</a> so that we can correct or extend the information provided</td>
+  </tr>
+</tbody>
+</table><div class="clear"></div></div></div></div></div></div></div><div class="clear"></div><div id="ieBugTest"></div><div id="mask"></div><div id="searchContainer">&nbsp;</div><div class="headfoot" id="footer"><div class="container"><div class="links"><div style="float:left; padding:10px; padding-top:6px;"><a href="http://www.facebook.com/iucn.red.list"><img alt="" border="0" src="/images/common/iucn_facebook.png" /></a><a href="http://twitter.com/#!/IUCNRedList/"><img alt="" border="0" src="/images/common/iucn_twitter.png" /></a><span style="font-weight: bold; font-family: Arial;color: #A60000">&nbsp; ISSN 2307-8235</span></div><a href="/">Home</a> | <a href="/about/contact-info">Contact</a> | <a href="/info/faq">FAQ</a> | <a href="mailto:redlist@iucn.org?Subject=IUCN Red List website" target="_top">Feedback</a> | <a href="/info/site-map">Site Map</a> | <a href="https://support.iucnredlist.org/donate">Donate Now</a> | <a href="/info/privacy-policy">Privacy &amp; Security</a> | <a href="/info/terms-of-use">Terms of Use</a><br />&copy; International Union for Conservation of Nature and Natural Resources.</div><div style="float:left; padding:100px;padding-bottom:6px; padding-top:6px;"><a href="http://www.iucn.org"><img alt="IUCN" border="0" height="35" src="/images/common/iucn_logo.gif" width="36" /></a><a href="http://www.iucn.org/about/work/programmes/species/"><img alt="Species Survival Commission" border="0" height="35" src="/images/common/ssc_logo.gif" width="66" /></a><a href="http://www.asu.edu"><img alt="Arizona State University" border="0" height="35" src="/images/common/plogos/CBO-logo-socialmedia-Square.jpg" /></a><a href="http://www.birdlife.org"><img alt="Birdlife International" border="0" height="35" src="/images/common/plogos/Birdlife.gif" width="44" /></a><a href="http://www.bgci.org"><img alt="BGCI" border="0" height="39" src="/images/common/plogos/BGCI-2.jpg" width="32" /></a>&nbsp;<a href="http://www.conservation.org"><img alt="Conservation International" border="0" height="35" src="/images/common/plogos/ci-2.png" width="109" /></a><a href="http://www.natureserve.org"><img alt="NatureServe" border="0" height="35" src="/images/common/plogos/NatureServe_small-2.jpg" width="59" /></a><br /><a href="http://www.kew.org"><img alt="Kew Botanical Gardens" border="0" height="30" src="/images/common/plogos/kew_logo_2015_k.jpg" width="73" /></a><a href="http://www.uniroma1.it"><img alt="Sapienza University" border="0" height="35" src="/images/common/plogos/SAPU_small-2.jpg" width="93" /></a><a href="http://www.tamu.edu"><img alt="Texas A&amp;amp;M University" border="0" height="35" src="/images/common/plogos/TAMUsmall.jpg" width="144" /></a><a href="http://www.zsl.org"><img alt="ZSL" border="0" height="35" src="/images/common/plogos/ZSL_refined.png" width="50" /></a>&nbsp; &nbsp;</div></div></div><script src="/index.js"></script></body></html>
