@@ -7,6 +7,6 @@ This repository contains the files necessary to complete the Coding Club Web Scr
 
 All data used in the tutorial were taken from http://www.iucnredlist.org.
 
-`penguin_example.R` is an example R script based on the content of the tutorial.
+`Penguin_example.R` is an example R script based on the content of the tutorial.
 
 We would love to hear your feedback on the tutorial, whether you did it in the classroom or online: https://www.surveymonkey.co.uk/r/S9R5G2T
