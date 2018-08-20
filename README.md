@@ -9,7 +9,7 @@ All data used in the tutorial were taken from http://www.iucnredlist.org.
 
 `Penguin_example.R` is an example R script based on the content of the tutorial.
 
-Check out https://ourcodingclub.github.io/workshop/ to learn how you can get involved!
+Check out https://ourcodingclub.github.io/workshop/ to learn how you can get involved.
 
 We would love to hear your feedback on the tutorial, whether you did it at a Coding Club workshop or online: 
 https://www.surveymonkey.co.uk/r/S9R5G2T
